@@ -1,3 +1,3 @@
 development:
-	adapter: ’sqlite3’
-	database: ’db/pet_app.db’
+  adapter: 'sqlite3'
+  database: 'db/pets.db'
