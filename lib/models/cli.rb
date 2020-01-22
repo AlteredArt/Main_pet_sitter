@@ -1,4 +1,5 @@
 
+
 def welcome
     puts "Welcome to 'Pet Sitter” have you used our app before?"
     puts "Enter: Yes or No"
@@ -22,6 +23,7 @@ def answer?
 end
 
 
+
 def create_a_owner
     Owner.create(first_name: "first_name", last_name: "last_name")
 end
@@ -35,13 +37,9 @@ def full_name
     "#{self.first_name} #{self.last_name}"
   end  
 
+
 def the_end
     puts "thanks for using our app"
 end
-
-
-
-
-
 
 
