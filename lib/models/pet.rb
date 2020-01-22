@@ -5,11 +5,3 @@ class Pet < ActiveRecord::Base
 end
 
 
-
-# Pets
-# Name
-# Age
-# Breed
-# Fk sitters
-# Fk owners 
-# Pets belong to many owners and many sitters through single owner, but does not know sitters
