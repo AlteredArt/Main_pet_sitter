@@ -14,10 +14,10 @@ ActiveRecord::Schema.define(version: 2020_01_21_232837) do
 
   create_table "appointments", force: :cascade do |t|
     t.date "date"
-    t.integer "pets_id"
-    t.integer "sitters_id"
-    t.index ["pets_id"], name: "index_appointments_on_pets_id"
-    t.index ["sitters_id"], name: "index_appointments_on_sitters_id"
+    t.integer "pet_id"
+    t.integer "sitter_id"
+    t.index ["pet_id"], name: "index_appointments_on_pet_id"
+    t.index ["sitter_id"], name: "index_appointments_on_sitter_id"
   end
 
   create_table "owners", force: :cascade do |t|
@@ -35,4 +35,6 @@ ActiveRecord::Schema.define(version: 2020_01_21_232837) do
     t.string "name_of_company"
   end
 
+  add_foreign_key "appointments", "pets"
+  add_foreign_key "appointments", "sitters"
 end
