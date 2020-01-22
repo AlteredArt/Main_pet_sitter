@@ -16,6 +16,7 @@ pet3 = Pet.create(name: "harley", kind: "dog",age: 9)
 pet4 = Pet.create(name: "waffle", kind: "cat",age: 7)
 pet5 = Pet.create(name: "cookie", kind: "cat",age: 6)
 
+
 sitter1 = Sitter.create(name_of_company:"Walk a Dog")
 sitter2 = Sitter.create(name_of_company:"Pet a Cat")
 sitter3 = Sitter.create(name_of_company:"Doggie Days")
