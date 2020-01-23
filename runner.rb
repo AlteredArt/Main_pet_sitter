@@ -1,9 +1,9 @@
-require_relative "config/environment"
+require_relative "./config/environment"
 
 
 cli = Cli.new
-cli.welcome_menu
+cli.welcome
 
 
-
-
+# binding.pry
+# 0
