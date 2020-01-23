@@ -1,33 +1,53 @@
 class Cli
     attr_reader :owner
- 
-
 
 def welcome
     puts "Welcome, Please enter your first name"
         user_first = gets.chomp
     puts "Please enter your last name"
         user_last = gets.chomp
-        full_name(user_first, user_last)
+        puts "Welcome, #{full_name(user_first, user_last)}"
+        find_owner(user_first, user_last)
     end
 end
 
-# owner = Owner.find_by(full_name)
-# def create_a_owner
-# if owner
-# create_new_pet
-# else
-# owner = Owner.create(user_first, user_last)
-# create_new_pet
-# end
-
 def full_name(user_first, user_last)
-    puts "#{user_first} #{user_last}"
+    "#{user_first} #{user_last}"
 end  
 
-#   def create_new_pet(name, kind, age)
+
+def find_owner(user_first, user_last)
+        @owner = Owner.find_by(first_name: user_first,last_name: user_last)
+     if owner
+        puts "Here are your furballs:"
+        puts owner.pets.pluck(:name)  #change eventually
+        menu
+    else
+         create_a_owner(user_first, user_last)
+    end
+end
+
+def create_a_owner(user_first, user_last)
+    @owner = Owner.create(first_name: user_first,last_name: user_last)
+ end
+
+def menu
+       puts "Would you like to 1.) Add a new pet, or 2.) Add a appointment for a current pet?"
+        puts"Enter 'New Pet' or 'New Appointment'"
+        user_answer = gets.chomp.downcase
+            if user_answer == "new pet"
+                create_new_pet
+            else user_answer == "new appointment"
+                create_new_appointmet
+        end
+
+    end
+
+#   def create_new_pet
+
 #       Pet.create(name: "name", kind: "kind", age: age)
 #   end
+
 # def create_new_owner(first_name, last_name)
 #     Owner.create(first_name: "first_name", last_name: "last_name")
 # end
