@@ -1,18 +1,18 @@
 class Cli
     attr_reader :owner
-
+ 
 
 
 def welcome
     puts "Welcome, Please enter your first name"
-        user_first= gets.chomp
+        user_first = gets.chomp
     puts "Please enter your last name"
-        user_last= gets.chomp
-    puts "Welcome, full_name()"
-        owner = Owner.find_by(full_name)
+        user_last = gets.chomp
+        full_name(user_first, user_last)
     end
 end
 
+# owner = Owner.find_by(full_name)
 # def create_a_owner
 # if owner
 # create_new_pet
@@ -21,9 +21,9 @@ end
 # create_new_pet
 # end
 
-def full_name
-    "#{user_first} #{user_last}"
-  end  
+def full_name(user_first, user_last)
+    puts "#{user_first} #{user_last}"
+end  
 
 #   def create_new_pet(name, kind, age)
 #       Pet.create(name: "name", kind: "kind", age: age)
