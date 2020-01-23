@@ -6,5 +6,3 @@ class CreateSittersTable < ActiveRecord::Migration[6.0]
   end
 end
 
-# t.refrences :owner, foreign_key: true
-# t.refrences :pet, foreign_key: true

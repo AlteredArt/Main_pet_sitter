@@ -70,9 +70,8 @@ DEPENDENCIES
   rake (~> 13.0)
   require_all (~> 3.0)
   rest-client (~> 2.1)
-  sinatra (~> 2.0)
   sinatra-activerecord (~> 2.0)
   sqlite3 (~> 1.4)
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
