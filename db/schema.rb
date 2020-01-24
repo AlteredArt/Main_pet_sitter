@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_23_000442) do
+ActiveRecord::Schema.define(version: 2020_01_24_165344) do
 
   create_table "appointments", force: :cascade do |t|
-    t.date "date"
+    t.string "date"
     t.integer "pet_id"
     t.integer "sitter_id"
     t.index ["pet_id"], name: "index_appointments_on_pet_id"
