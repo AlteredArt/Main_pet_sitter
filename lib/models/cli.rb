@@ -10,11 +10,6 @@ def welcome
             puts "Welcome, #{full_name(user_first, user_last)}"
         find_owner(user_first, user_last)
     end
-end
-
-def full_name(user_first, user_last)
-    "#{user_first} #{user_last}"
-end  
 
 def find_owner(user_first, user_last)
         @owner = Owner.find_by(first_name: user_first,last_name: user_last)
@@ -22,14 +17,17 @@ def find_owner(user_first, user_last)
         sub_menu
     else
          create_a_owner(user_first, user_last)
-       
          create_new_pet
     end
 end
 
-def create_a_owner(user_first, user_last)
-    @owner = Owner.create(first_name: user_first,last_name: user_last)
- end
+    def full_name(user_first, user_last)
+        "#{user_first} #{user_last}"
+    end
+
+    def create_a_owner(user_first, user_last)
+        @owner = Owner.create(first_name: user_first,last_name: user_last)
+    end
 
 def menu
        puts "Would you like to add a new pet? Enter '1' \n Would you like to setup a appointment for a current pet? Enter '2' \n Or would you like to exit? Enter '3'"
@@ -107,3 +105,4 @@ def end_program
         exit!
  end
 
+end 
